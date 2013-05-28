@@ -111,6 +111,8 @@ Set time zone:
 dpkg-reconfigure tzdata
 ~~~
 
+**NB** London is one hour ahead of UTC in the summer.
+
 Update time:
 
 ~~~
