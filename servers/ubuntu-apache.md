@@ -125,6 +125,12 @@ And check:
 date
 ~~~
 
+Install NTP:
+
+~~~
+apt-get install ntp
+~~~
+
 ### Firewall
 
 Install UFW:
@@ -159,3 +165,9 @@ cat ~/.ssh/id_rsa.pub | ssh root@server "cat >> .ssh/authorized_keys"
 ## Final Checklist
 
 Restart the server and check HTTP, and HTTPS if possible.
+
+Check NTP:
+
+~~~
+/etc/init.d/ntp status
+~~~
