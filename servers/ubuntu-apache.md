@@ -80,6 +80,15 @@ Edit `/etc/apache2/httpd.conf`, add:
 ServerName server0.wearearchitect.com
 ~~~
 
+Edit `/etc/hosts`, add:
+
+~~~
+xx.xx.xx.xx server0.wearearchitect.com
+xx:xx:xx:xx:xx:xx:xx server0.wearearchitect.com
+~~~
+
+Remember to use IPv6 if included.
+
 ### Default Character Set
 
 Edit `/etc/apache2/httpd.conf`, add:
@@ -106,6 +115,27 @@ And check:
 
 ~~~
 date
+~~~
+
+### Firewall
+
+Install UFW:
+
+~~~
+apt-get install ufw
+~~~
+
+Enable web traffic:
+
+~~~
+ufw allow http
+ufw allow https
+~~~
+
+Turn on the firewall:
+
+~~~
+ufw enable
 ~~~
 
 ## Authorised Keys
