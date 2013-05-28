@@ -1,5 +1,9 @@
 # Server Commission for Ubuntu & Apache
 
+| Version | Author         | Notes        |
+| ------- | -------------- | ------------ |
+| 1.0     | Thomas Edwards | Created file |
+
 ## Apache
 
 Install:
@@ -148,3 +152,6 @@ Run locally:
 cat ~/.ssh/id_rsa.pub | ssh root@server "cat >> .ssh/authorized_keys"
 ~~~
 
+## Final Checklist
+
+Restart the server and check HTTP, and HTTPS if possible.
