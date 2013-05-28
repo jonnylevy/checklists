@@ -131,6 +131,12 @@ Install NTP:
 apt-get install ntp
 ~~~
 
+Start NTP:
+
+~~~
+service ntp start
+~~~
+
 ### Firewall
 
 Install UFW:
