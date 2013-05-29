@@ -8,7 +8,7 @@ Checklist for web development go live.
 
 ## Pre
 
-### Analtyics
+### Analytics
 
 **Stage** Off  
 **Production** On & check
