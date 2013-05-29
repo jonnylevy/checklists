@@ -74,6 +74,12 @@ Install cURL, with XML module:
 apt-get install curl php5-curl php5-xmlrpc
 ~~~
 
+Install Internationalization:
+
+~~~
+apt-get install php5-intl
+~~~
+
 ## HTTP Checklist
 
 ### FQDN
