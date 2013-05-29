@@ -26,6 +26,6 @@ Check
 
 Check
 
-### 303 redirects from previous URLs
+### 301 redirects from previous URLs
 
 Check
