@@ -2,6 +2,10 @@
 
 Checklist for web development go live.
 
+| Version | Author         | Notes                          |
+| ------- | -------------- | ------------------------------ |
+| 1.0.0   | Thomas Edwards | Created file                   |
+
 ## Pre
 
 ### Analtyics
