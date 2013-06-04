@@ -4,6 +4,8 @@ Checklist for setting up a fresh Macintosh.
 
 | Version | Author         | Notes                          |
 | ------- | -------------- | ------------------------------ |
+| 1.0.2   | Thomas Edwards | Expanded Server and Sublime    |
+| 1.0.1   | Adam Onishi    | Added Sublime notes            |
 | 1.0.0   | Thomas Edwards | Created file                   |
 
 ## OS X
