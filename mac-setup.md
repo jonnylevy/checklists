@@ -34,6 +34,10 @@ Checklist for setting up a fresh Macintosh.
 	* WordPress
 	* Git (?)
 	* Gist (?)
+	* Alignment
+	* ApacheConf
+	* Dockblockr
+	* SideBarEnhancements
 * Xcode
 * Xcode Command Line Tools
 * Transmit
@@ -45,10 +49,12 @@ Checklist for setting up a fresh Macintosh.
 ## Server
 
 * Setup Apache
-* Update PHP version
+* Update PHP
 * Install MySQL
 * Node
 * Git
+* Update Ruby
+* Rails
 
 ### Libraries
 
