@@ -11,6 +11,10 @@ Checklist for setting up a fresh Macintosh.
 * Switch langauge to British English
 * Enable all keyboard shortcuts
 
+## Shell
+
+* Install Oh-my-zsh
+
 ## Network
 
 * Setup local domains
@@ -24,6 +28,12 @@ Checklist for setting up a fresh Macintosh.
 * OmniGraffle Professional
 * VMWare
 * Sublime Text
+	* Sublime text package manager
+	* Sass
+	* Emmet
+	* WordPress
+	* Git (?)
+	* Gist (?)
 * Xcode
 * Xcode Command Line Tools
 * Transmit
