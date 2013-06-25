@@ -218,4 +218,6 @@ a2ensite configname
 
 ### Restart Apache
 
+~~~
 service apache2 reload
+~~~
