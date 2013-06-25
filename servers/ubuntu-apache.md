@@ -4,6 +4,7 @@ Notes and checklist for setting up an Ubuntu LAMP server.
 
 | Version | Author         | Notes                          |
 | ------- | -------------- | ------------------------------ |
+| 1.0.2   | Thomas Edwards | Added add a user notes         |
 | 1.0.1   | Thomas Edwards | Added PHP Internationalization |
 | 1.0.0   | Thomas Edwards | Created file                   |
 
@@ -184,3 +185,37 @@ Check NTP:
 ~~~
 /etc/init.d/ntp status
 ~~~
+
+## Adding a new user
+
+### Create the new user
+
+~~~
+useradd -d /home/username -m username
+~~~
+
+### Create a password
+
+~~~
+passwd username
+~~~
+
+You will then be asked to set the password twice.
+
+### Set permissions
+
+chown -Rv username:username /home/username
+
+### Create the Apache config
+
+See /etc/apache2/sites-available(/sitename)
+
+### Enable site
+
+~~~
+a2ensite configname
+~~~
+
+### Restart Apache
+
+service apache2 reload
