@@ -38,6 +38,12 @@ Install PHP, with Apache PHP module:
 apt-get install php5 libapache2-mod-php5
 ~~~
 
+Install MCrypt security module
+
+~~~
+sudo apt-get install php5-mcrypt
+~~~
+
 ## MySQL
 
 Install MySQL, with Apache and PHP modules:
