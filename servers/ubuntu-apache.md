@@ -105,6 +105,21 @@ Install Grunt
 sudo npm install -g grunt-cli
 ~~~
 
+Install ruby (1.9.1 will install the latest one)
+
+~~~
+sudo apt-get install ruby1.9.1
+~~~
+
+Install Gems
+
+Install SASS & Compass
+
+~~~
+sudo gem install sass
+sudo gem install compass
+~~~
+
 ## HTTP Checklist
 
 ### FQDN
