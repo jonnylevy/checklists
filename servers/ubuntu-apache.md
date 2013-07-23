@@ -88,6 +88,23 @@ Install Internationalization:
 apt-get install php5-intl
 ~~~
 
+Install Node
+
+~~~
+apt-get g++ curl libssl-dev apache2-utils
+git clone git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+~~~
+
+Install Grunt
+
+~~~
+sudo npm install -g grunt-cli
+~~~
+
 ## HTTP Checklist
 
 ### FQDN
