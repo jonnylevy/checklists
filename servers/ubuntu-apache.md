@@ -8,6 +8,12 @@ Notes and checklist for setting up an Ubuntu LAMP server.
 | 1.0.1   | Thomas Edwards | Added PHP Internationalization |
 | 1.0.0   | Thomas Edwards | Created file                   |
 
+Install Build Tools
+
+~~~
+sudo apt-get install build-essential
+~~~
+
 ## Apache
 
 Install:
