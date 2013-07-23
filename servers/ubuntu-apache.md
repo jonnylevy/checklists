@@ -126,6 +126,12 @@ sudo gem install sass
 sudo gem install compass
 ~~~
 
+Install Memcached
+
+~~~
+apt-get install memcached php5-memcached
+~~~
+
 ## HTTP Checklist
 
 ### FQDN
