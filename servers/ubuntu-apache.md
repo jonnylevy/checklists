@@ -4,6 +4,7 @@ Notes and checklist for setting up an Ubuntu LAMP server.
 
 | Version | Author         | Notes                          |
 | ------- | -------------- | ------------------------------ |
+| 1.0.3   | Tom Aston      | Added Vim notes                |
 | 1.0.2   | Thomas Edwards | Added add a user notes         |
 | 1.0.1   | Thomas Edwards | Added PHP Internationalization |
 | 1.0.0   | Thomas Edwards | Created file                   |
@@ -64,6 +65,14 @@ Install Postfix:
 
 ~~~
 apt-get install postfix
+~~~
+
+## Vim
+
+Install Vim editor:
+
+~~~
+sudo apt-get install vim
 ~~~
 
 ## Git
