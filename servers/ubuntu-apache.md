@@ -118,7 +118,7 @@ sudo npm install -g grunt-cli
 Install ruby (1.9.1 will install the latest one)
 
 ~~~
-sudo apt-get install ruby1.9.1
+sudo apt-get install ruby1.9.1-dev
 ~~~
 
 Install Gems
