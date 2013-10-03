@@ -2,12 +2,7 @@
 
 Notes and checklist for setting up an Ubuntu LAMP server.
 
-| Version | Author         | Notes                          |
-| ------- | -------------- | ------------------------------ |
-| 1.0.3   | Tom Aston      | Added Vim notes                |
-| 1.0.2   | Thomas Edwards | Added add a user notes         |
-| 1.0.1   | Thomas Edwards | Added PHP Internationalization |
-| 1.0.0   | Thomas Edwards | Created file                   |
+## Build Tools
 
 Install Build Tools
 
@@ -72,7 +67,7 @@ apt-get install postfix
 Install Vim editor:
 
 ~~~
-sudo apt-get install vim
+apt-get install vim
 ~~~
 
 ## Git
@@ -106,8 +101,8 @@ apt-get install php5-intl
 Install Node
 
 ~~~
-apt-get g++ curl libssl-dev apache2-utils
-git clone git clone git://github.com/ry/node.git
+apt-get install g++ curl libssl-dev apache2-utils
+git clone git://github.com/ry/node.git
 cd node
 ./configure
 make
@@ -164,7 +159,7 @@ Remember to use IPv6 if included.
 
 ### Default Character Set
 
-Edit `/etc/apache2/httpd.conf`, add:
+Edit `/etc/apache2/conf.d/charset`, uncomment:
 
 ~~~
 AddDefaultCharset utf-8
