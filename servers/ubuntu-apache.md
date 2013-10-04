@@ -258,11 +258,15 @@ You will then be asked to set the password twice.
 
 ### Set permissions
 
+~~~
 chown -Rv username:username /home/username
+~~~
 
 ### Create the Apache config
 
-See /etc/apache2/sites-available(/sitename)
+~~~
+cp /etc/apache2/sites-available/[existinguser] /etc/apache2/sites-available/[username]
+~~~
 
 ### Enable site
 
