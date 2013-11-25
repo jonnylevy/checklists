@@ -118,7 +118,7 @@ sudo npm install -g grunt-cli
 Install ruby (1.9.1 will install the latest one)
 
 ~~~
-sudo apt-get install ruby1.9.1
+sudo apt-get install ruby1.9.1-dev
 ~~~
 
 Install Gems
@@ -258,11 +258,17 @@ You will then be asked to set the password twice.
 
 ### Set permissions
 
+~~~
 chown -Rv username:username /home/username
+~~~
 
 ### Create the Apache config
 
-See /etc/apache2/sites-available(/sitename)
+~~~
+cp /etc/apache2/sites-available/[existinguser] /etc/apache2/sites-available/[username]
+~~~
+
+Edit the new config file with virtual host details for the new site
 
 ### Enable site
 
