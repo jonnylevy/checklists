@@ -7,14 +7,14 @@ Checklist for web development go live.
 Analytics
 ---------
 
-**Stage** Off
-**Production** On & check
+- **Stage** Off
+- **Production** On & check
 
 Robots
 ------
 
-**Stage** Deny all
-**Production** Allow all
+- **Stage** Deny all
+- **Production** Allow all
 
 www redirect
 ------------
