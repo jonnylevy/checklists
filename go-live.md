@@ -1,31 +1,37 @@
-# Go Live
+Go Live
+=======
 
 Checklist for web development go live.
 
-| Version | Author         | Notes                          |
-| ------- | -------------- | ------------------------------ |
-| 1.0.0   | Thomas Edwards | Created file                   |
 
-## Pre
+Analytics
+---------
 
-### Analytics
-
-**Stage** Off  
+**Stage** Off
 **Production** On & check
 
-### Robots
+Robots
+------
 
-**Stage** Deny all  
+**Stage** Deny all
 **Production** Allow all
 
-### www redirect
+www redirect
+------------
 
 Check
 
-### 404 page
+404 page
+--------
+
+Check returns HTTP 404
+
+301 redirects from previous URLs
+--------------------------------
 
 Check
 
-### 301 redirects from previous URLs
+Google Webmaster Tools
+----------------------
 
-Check
+Check for indexing
