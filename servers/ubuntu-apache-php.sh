@@ -107,6 +107,11 @@ service ntp start
 # echo "$vhost" | sudo tee /etc/apache2/sites-available/beansole.app.conf
 # sudo a2ensite beansole.app
 # sudo /etc/init.d/apache2 restart
+#
+# @TODO: useradd
+# if $USER_NAME is set
+# useradd -d /home/$USER_NAME -m $USER_NAME
+# chown -Rv $USER_NAME:$USER_NAME /home/$USER_NAME
 
 figlet reboot
 
