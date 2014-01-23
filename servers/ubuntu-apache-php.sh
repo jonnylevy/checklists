@@ -6,6 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get install -y build-essential g++ libssl-dev figlet curl vim git-core ntp ufw php5 apache2 apache2-utils libapache2-mod-php5 mysql-server php5-mysql memcached php5-memcached beanstalkd php5-json php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt ruby1.9.1-dev postfix
 
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+source ~/.profile
 nvm install 0.10.24
 nvm alias default 0.10.24
 
