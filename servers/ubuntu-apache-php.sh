@@ -12,9 +12,9 @@ nvm alias default 0.10.24
 
 sudo npm install -g grunt-cli
 sudo npm install -g bower
+sudo gem install sass --no-ri --no-rdoc
+sudo gem install compass --no-ri --no-rdoc
 
-sudo gem install sass
-sudo gem install compass
 
 a2enmod rewrite
 a2enmod ssl
