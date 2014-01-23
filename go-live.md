@@ -19,7 +19,7 @@ Robots
 www redirect
 ------------
 
-Check
+Check for correct redirect
 
 404 page
 --------
@@ -34,7 +34,7 @@ Check returns HTTP 500 and isn’t scary
 301 redirects from previous URLs
 --------------------------------
 
-Check
+(Where applicable) Check
 
 Google Webmaster Tools
 ----------------------
@@ -45,3 +45,8 @@ SSL
 ---
 
 (Where applicable) Check for validation, redirection, cross-browser
+
+IE Edge
+-------
+
+Ensure IE Edge mode is sent as header
