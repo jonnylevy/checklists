@@ -1,7 +1,17 @@
 Setting up your Ubuntu Server
 =============================
 
-## Installation
+## The Short Way
+
+run this to run all the automatable stuff on this page.
+
+```
+wget -qO- https://raw.github.com/wearearchitect/checklists/master/servers/ubuntu-apache-php.sh | sh
+```
+
+## The Long Way
+
+### Installation
 
 Install all the things!
 
@@ -46,9 +56,9 @@ php5enmod xmlrpc
 php5enmod intl
 ```
 
-## Configuration
+### Configuration
 
-#### FQDN
+##### FQDN
 
 Set the server’s fully qualified domain name (FQDN):
 
@@ -65,7 +75,7 @@ xx.xx.xx.xx server0.wearearchitect.com
 xx:xx:xx:xx:xx:xx:xx server0.wearearchitect.com
 ~~~
 
-#### Firewall
+##### Firewall
 
 Enable web traffic and SSH:
 
@@ -80,7 +90,7 @@ Now, turn on that firewall!
 ufw enable
 
 
-#### Default Character Set
+##### Default Character Set
 
 Edit `/etc/apache2/conf.d/charset`, uncomment:
 
@@ -88,7 +98,7 @@ Edit `/etc/apache2/conf.d/charset`, uncomment:
 AddDefaultCharset utf-8
 ~~~
 
-#### Time Zones
+##### Time Zones
 
 Set time zone:
 
