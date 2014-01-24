@@ -3,6 +3,35 @@
 # sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password secret'
 # sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password secret'
 
+adduser()
+{
+	echo "Adding user: $1"
+	useradd -d /home/$1 -m $1
+	chown -Rv $1:$1 /home/$1
+}
+
+addvhost()
+{
+	DIRECTORY="$1"
+	DOMAIN="$2"
+
+	echo "Adding site: $DOMAIN as $DIRECTORY"
+	vhost="<VirtualHost *:80>
+	     ServerName $DOMAIN
+	     DocumentRoot /home/$DIRECTORY
+	     <Directory \"/home/$DIRECTORY\">
+	          Order allow,deny
+	          Allow from all
+	          Require all granted
+	          AllowOverride All
+	    </Directory>
+	</VirtualHost>"
+	echo "$vhost" | sudo tee /etc/apache2/sites-available/$DIRECTORY.conf
+	sudo a2ensite $DIRECTORY
+
+	# adduser $DIRECTORY
+}
+
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -11,7 +40,7 @@ sudo apt-get install -y build-essential g++ libssl-dev figlet curl vim git-core 
 figlet installing node
 
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-source ~/.profile
+source .profile
 nvm install 0.10.24
 nvm alias default 0.10.24
 
