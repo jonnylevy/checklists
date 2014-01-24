@@ -9,6 +9,17 @@ run this to run all the automatable stuff on this page.
 wget -qO- https://raw.github.com/wearearchitect/checklists/master/servers/ubuntu-apache-php.sh | sh
 ```
 
+You can specify the following options before running this script:
+
+```
+# to set the fqdn
+export FQDN='serverX.jonnythreescreens.com'
+# to set up a user and vhost
+export USER='portal'
+export DOMAIN='website.com'
+# this will set up a user, portal, and a vhost pointing website.com to /home/portal/public
+```
+
 ## The Long Way
 
 ### Installation
