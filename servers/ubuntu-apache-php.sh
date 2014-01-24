@@ -6,8 +6,8 @@
 adduser()
 {
 	figlet "Adding user: $1"
-	useradd -d /home/$1 -m $1
-	chown -Rv $1:$1 /home/$1
+	sudo useradd -d /home/$1 -m $1
+	sudo chown -Rv $1:$1 /home/$1
 }
 
 addvhost()
@@ -18,8 +18,8 @@ addvhost()
 	figlet "Adding site: $DOMAIN as $DIRECTORY"
 	vhost="<VirtualHost *:80>
 	     ServerName $DOMAIN
-	     DocumentRoot /home/$DIRECTORY
-	     <Directory \"/home/$DIRECTORY\">
+	     DocumentRoot /home/$DIRECTORY/public
+	     <Directory \"/home/$DIRECTORY/public\">
 	          Order allow,deny
 	          Allow from all
 	          Require all granted
@@ -28,8 +28,6 @@ addvhost()
 	</VirtualHost>"
 	echo "$vhost" | sudo tee /etc/apache2/sites-available/$DIRECTORY.conf
 	sudo a2ensite $DIRECTORY
-
-	# adduser $DIRECTORY
 }
 
 sudo apt-get update
@@ -93,47 +91,26 @@ sudo pear install pear.phpunit.de/phpunit
 
 figlet generate keys
 
-mkdir ~/.ssh
-pushd ~/.ssh
+mkdir -p ~/.ssh
+cd ~/.ssh
 ssh-keygen -f id_rsa -t rsa -N ''
-popd
+cd -
 
-#
-# Add a passwordless user
-# -u username
-#
-# Add A Virtual Host
-# -v "user;domain.com"
-#
-# Set the FQDN
-# -d domain
-#
+if [[ -z "$FQDN" ]]; then
+	figlet set FQDN
+	echo ServerName $FQDN >> /etc/apache2/apache2.conf
+fi
 
-while getopts ":u:v:d:" opt; do
-	case $opt in
-		u)
-			adduser $OPTARG
-			;;
-		v)
-			IFS=';' read -ra DATA <<< "$OPTARG"
-			addvhost ${DATA[0]} ${DATA[1]}
-			;;
-		d)
-			figlet set FQDN
-			echo ServerName $OPTARG >> /etc/apache2/apache2.conf
-			;;
-		\?)
-			echo "Invalid option: -$OPTARG" >&2
-			exit 1
-			;;
-	esac
-done
+if [[ -n "$USER" && -n "$DOMAIN" ]]; then
+	adduser $USER
+	addvhost $USER $DOMAIN
+fi
 
-# figlet beansole
+figlet beansole
 
-# adduser beansole
-# su beansole "git clone https://github.com/ptrofimov/beanstalk_console.git ~/beanstalk_console"
-# addvhost "beansole/beanstalk_console" beansole.app
+adduser beansole
+addvhost "beansole/beanstalk_console" beansole.app
+su beansole "git clone https://github.com/ptrofimov/beanstalk_console.git ~/beanstalk_console"
 
 figlet reboot
 
