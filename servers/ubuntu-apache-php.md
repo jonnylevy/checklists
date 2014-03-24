@@ -30,6 +30,11 @@ Install all the things!
 sudo apt-get install -y build-essential g++ libssl-dev figlet curl vim git-core ntp ufw php5 apache2 apache2-utils libapache2-mod-php5 mysql-server php5-mysql memcached php5-memcached beanstalkd php5-json php5-curl php5-gd php5-xmlrpc php5-intl php5-mcrypt ruby1.9.1-dev postfix ntp
 ```
 
+Install php5-cli
+```
+apt-get install php5-cli
+```
+
 Then make yourself some node (replace 0.10.24 with whatever version of node you want)
 
 ```
